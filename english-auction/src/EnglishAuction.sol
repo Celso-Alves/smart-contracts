@@ -39,7 +39,7 @@ contract EnglishAuction {
     }
 
     function bid() external payable {
-        // validations
+        // validacoes
         require(started, "Auction has not started");
         require(msg.value > highestBid, "Bid price is lower than the current highest bid");
         require(block.timestamp < endTime, "Auction has ended");
